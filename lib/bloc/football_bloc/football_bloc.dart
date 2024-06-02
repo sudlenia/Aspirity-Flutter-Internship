@@ -57,6 +57,7 @@ class FootballBloc extends Bloc<FootballEvent, FootballState> {
     emit(const FootballState.loadingStandings());
     try {
       final year = event.year;
+      print(year);
       if (prevState is _Standings) {
         try {
           final standingsData = await _repository.fetchStandingsData(
@@ -69,10 +70,9 @@ class FootballBloc extends Bloc<FootballEvent, FootballState> {
           // У каких-то чемпионатов в сезонах есть информация о годе, но в турнирной таблице нет такого сезона, поэтому обрабатываю это здесь
           // https://football-standings-api-pqotco6hc-azharimm.vercel.app/leagues/arg.1/seasons
           // https://football-standings-api-pqotco6hc-azharimm.vercel.app/leagues/arg.1/standings?season=2000&sort=asc
-          emit(FootballState.standings(
-              standingsData: prevState.standingsData,
-              seasons: prevState.seasons,
-              currentLeagueId: prevState.currentLeagueId!));
+          emit(const FootballState.failedToLoadSeason(
+              errorText: "Не удалось получить данные об этом сезоне"));
+          add(FootballEvent.toStandings(leagueId: prevState.currentLeagueId!));
         }
       }
     } catch (e) {

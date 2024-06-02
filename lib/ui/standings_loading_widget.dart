@@ -22,6 +22,7 @@ class StandingsLoadingWidget extends StatelessWidget {
           Image.asset("assets/standings.png"),
           const Expanded(child: SizedBox()),
           const CircularProgressIndicator(color: Colors.white),
+          const Expanded(child: SizedBox()),
         ],
       ),
     ));

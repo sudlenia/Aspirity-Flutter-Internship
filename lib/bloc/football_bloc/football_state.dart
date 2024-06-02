@@ -8,6 +8,9 @@ class FootballState with _$FootballState {
   const factory FootballState.failure({
     required String errorText,
   }) = _Failure;
+  const factory FootballState.failedToLoadSeason({
+    required String errorText,
+  }) = _FailedToLoadSeason;
   const factory FootballState.leagues({
     required List<League> leagues,
   }) = _Leagues;

@@ -476,6 +476,7 @@ mixin _$FootballState {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -488,6 +489,7 @@ mixin _$FootballState {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -500,6 +502,7 @@ mixin _$FootballState {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -513,6 +516,7 @@ mixin _$FootballState {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) =>
@@ -523,6 +527,7 @@ mixin _$FootballState {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) =>
@@ -533,6 +538,7 @@ mixin _$FootballState {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -600,6 +606,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -615,6 +622,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -630,6 +638,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -649,6 +658,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -662,6 +672,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -675,6 +686,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -732,6 +744,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -747,6 +760,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -762,6 +776,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -781,6 +796,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -794,6 +810,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -807,6 +824,7 @@ class _$LoadingLeaguesImpl implements _LoadingLeagues {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -864,6 +882,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -879,6 +898,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -894,6 +914,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -913,6 +934,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -926,6 +948,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -939,6 +962,7 @@ class _$LoadingStandingsImpl implements _LoadingStandings {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -1023,6 +1047,7 @@ class _$FailureImpl implements _Failure {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -1038,6 +1063,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1053,6 +1079,7 @@ class _$FailureImpl implements _Failure {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1072,6 +1099,7 @@ class _$FailureImpl implements _Failure {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -1085,6 +1113,7 @@ class _$FailureImpl implements _Failure {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -1098,6 +1127,7 @@ class _$FailureImpl implements _Failure {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -1115,6 +1145,178 @@ abstract class _Failure implements FootballState {
   String get errorText;
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FailedToLoadSeasonImplCopyWith<$Res> {
+  factory _$$FailedToLoadSeasonImplCopyWith(_$FailedToLoadSeasonImpl value,
+          $Res Function(_$FailedToLoadSeasonImpl) then) =
+      __$$FailedToLoadSeasonImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorText});
+}
+
+/// @nodoc
+class __$$FailedToLoadSeasonImplCopyWithImpl<$Res>
+    extends _$FootballStateCopyWithImpl<$Res, _$FailedToLoadSeasonImpl>
+    implements _$$FailedToLoadSeasonImplCopyWith<$Res> {
+  __$$FailedToLoadSeasonImplCopyWithImpl(_$FailedToLoadSeasonImpl _value,
+      $Res Function(_$FailedToLoadSeasonImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorText = null,
+  }) {
+    return _then(_$FailedToLoadSeasonImpl(
+      errorText: null == errorText
+          ? _value.errorText
+          : errorText // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FailedToLoadSeasonImpl implements _FailedToLoadSeason {
+  const _$FailedToLoadSeasonImpl({required this.errorText});
+
+  @override
+  final String errorText;
+
+  @override
+  String toString() {
+    return 'FootballState.failedToLoadSeason(errorText: $errorText)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FailedToLoadSeasonImpl &&
+            (identical(other.errorText, errorText) ||
+                other.errorText == errorText));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorText);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FailedToLoadSeasonImplCopyWith<_$FailedToLoadSeasonImpl> get copyWith =>
+      __$$FailedToLoadSeasonImplCopyWithImpl<_$FailedToLoadSeasonImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingLeagues,
+    required TResult Function() loadingStandings,
+    required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
+    required TResult Function(List<League> leagues) leagues,
+    required TResult Function(StandingsData standingsData, List<Season> seasons,
+            String? currentLeagueId)
+        standings,
+  }) {
+    return failedToLoadSeason(errorText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingLeagues,
+    TResult? Function()? loadingStandings,
+    TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
+    TResult? Function(List<League> leagues)? leagues,
+    TResult? Function(StandingsData standingsData, List<Season> seasons,
+            String? currentLeagueId)?
+        standings,
+  }) {
+    return failedToLoadSeason?.call(errorText);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingLeagues,
+    TResult Function()? loadingStandings,
+    TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
+    TResult Function(List<League> leagues)? leagues,
+    TResult Function(StandingsData standingsData, List<Season> seasons,
+            String? currentLeagueId)?
+        standings,
+    required TResult orElse(),
+  }) {
+    if (failedToLoadSeason != null) {
+      return failedToLoadSeason(errorText);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadingLeagues value) loadingLeagues,
+    required TResult Function(_LoadingStandings value) loadingStandings,
+    required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
+    required TResult Function(_Leagues value) leagues,
+    required TResult Function(_Standings value) standings,
+  }) {
+    return failedToLoadSeason(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadingLeagues value)? loadingLeagues,
+    TResult? Function(_LoadingStandings value)? loadingStandings,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
+    TResult? Function(_Leagues value)? leagues,
+    TResult? Function(_Standings value)? standings,
+  }) {
+    return failedToLoadSeason?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadingLeagues value)? loadingLeagues,
+    TResult Function(_LoadingStandings value)? loadingStandings,
+    TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
+    TResult Function(_Leagues value)? leagues,
+    TResult Function(_Standings value)? standings,
+    required TResult orElse(),
+  }) {
+    if (failedToLoadSeason != null) {
+      return failedToLoadSeason(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FailedToLoadSeason implements FootballState {
+  const factory _FailedToLoadSeason({required final String errorText}) =
+      _$FailedToLoadSeasonImpl;
+
+  String get errorText;
+  @JsonKey(ignore: true)
+  _$$FailedToLoadSeasonImplCopyWith<_$FailedToLoadSeasonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1193,6 +1395,7 @@ class _$LeaguesImpl implements _Leagues {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -1208,6 +1411,7 @@ class _$LeaguesImpl implements _Leagues {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1223,6 +1427,7 @@ class _$LeaguesImpl implements _Leagues {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1242,6 +1447,7 @@ class _$LeaguesImpl implements _Leagues {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -1255,6 +1461,7 @@ class _$LeaguesImpl implements _Leagues {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -1268,6 +1475,7 @@ class _$LeaguesImpl implements _Leagues {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),
@@ -1398,6 +1606,7 @@ class _$StandingsImpl implements _Standings {
     required TResult Function() loadingLeagues,
     required TResult Function() loadingStandings,
     required TResult Function(String errorText) failure,
+    required TResult Function(String errorText) failedToLoadSeason,
     required TResult Function(List<League> leagues) leagues,
     required TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)
@@ -1413,6 +1622,7 @@ class _$StandingsImpl implements _Standings {
     TResult? Function()? loadingLeagues,
     TResult? Function()? loadingStandings,
     TResult? Function(String errorText)? failure,
+    TResult? Function(String errorText)? failedToLoadSeason,
     TResult? Function(List<League> leagues)? leagues,
     TResult? Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1428,6 +1638,7 @@ class _$StandingsImpl implements _Standings {
     TResult Function()? loadingLeagues,
     TResult Function()? loadingStandings,
     TResult Function(String errorText)? failure,
+    TResult Function(String errorText)? failedToLoadSeason,
     TResult Function(List<League> leagues)? leagues,
     TResult Function(StandingsData standingsData, List<Season> seasons,
             String? currentLeagueId)?
@@ -1447,6 +1658,7 @@ class _$StandingsImpl implements _Standings {
     required TResult Function(_LoadingLeagues value) loadingLeagues,
     required TResult Function(_LoadingStandings value) loadingStandings,
     required TResult Function(_Failure value) failure,
+    required TResult Function(_FailedToLoadSeason value) failedToLoadSeason,
     required TResult Function(_Leagues value) leagues,
     required TResult Function(_Standings value) standings,
   }) {
@@ -1460,6 +1672,7 @@ class _$StandingsImpl implements _Standings {
     TResult? Function(_LoadingLeagues value)? loadingLeagues,
     TResult? Function(_LoadingStandings value)? loadingStandings,
     TResult? Function(_Failure value)? failure,
+    TResult? Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult? Function(_Leagues value)? leagues,
     TResult? Function(_Standings value)? standings,
   }) {
@@ -1473,6 +1686,7 @@ class _$StandingsImpl implements _Standings {
     TResult Function(_LoadingLeagues value)? loadingLeagues,
     TResult Function(_LoadingStandings value)? loadingStandings,
     TResult Function(_Failure value)? failure,
+    TResult Function(_FailedToLoadSeason value)? failedToLoadSeason,
     TResult Function(_Leagues value)? leagues,
     TResult Function(_Standings value)? standings,
     required TResult orElse(),

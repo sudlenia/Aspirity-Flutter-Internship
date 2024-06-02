@@ -32,18 +32,32 @@ class MainApp extends StatelessWidget {
         home: BlocProvider(
           create: (context) =>
               FootballBloc(repository)..add(const FootballEvent.toLeagues()),
-          child: BlocBuilder<FootballBloc, FootballState>(
-            builder: (context, state) {
-              return state.map(
-                  initial: (_) => const InitialWidget(),
-                  loadingLeagues: (_) => const LeaguesLoadingWidget(),
-                  loadingStandings: (_) => const StandingsLoadingWidget(),
-                  failure: (event) => FailedWidget(errorText: event.errorText),
-                  leagues: (event) => LeaguesWidget(leagues: event.leagues),
-                  standings: (event) =>
-                      TeamsWidget(standingsData: event.standingsData, seasons: event.seasons, repository: repository));
-            },
-          ),
+          child: BlocConsumer<FootballBloc, FootballState>(
+              listenWhen: (p, c) => p != c,
+              listener: (context, state) {
+                state.whenOrNull(failedToLoadSeason: (errorText) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(errorText),
+                      duration: const Duration(seconds: 2),
+                    ),
+                  );
+                });
+              },
+              builder: (context, state) {
+                return state.mapOrNull(
+                        initial: (_) => const InitialWidget(),
+                        loadingLeagues: (_) => const LeaguesLoadingWidget(),
+                        loadingStandings: (_) => const StandingsLoadingWidget(),
+                        failure: (event) =>
+                            FailedWidget(errorText: event.errorText),
+                        leagues: (event) =>
+                            LeaguesWidget(leagues: event.leagues),
+                        standings: (event) => TeamsWidget(
+                            standingsData: event.standingsData,
+                            seasons: event.seasons,
+                            repository: repository)) ?? const StandingsLoadingWidget();
+              }),
         ));
   }
 }

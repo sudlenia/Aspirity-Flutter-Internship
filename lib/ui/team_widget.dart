@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/data/team_data/team_data.dart';
-import 'package:flutter_application_2/domain/models/standings_group/team_logos/team_logos.dart';
 import 'package:gap/gap.dart';
 
 class TeamWidget extends StatelessWidget {
   final TeamData teamData;
   const TeamWidget({super.key, required this.teamData});
-
-  String getImg(TeamLogos? logos) {
-    return logos != null
-        ? logos.href
-        : "https://eis.clientsimple.ru/upload/iblock/353/b0w2diy92mr6m409b1qsvc2l5gjjz2pp.jpg";
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +26,7 @@ class TeamWidget extends StatelessWidget {
             Row(
               children: [
                 Image.network(
-                  getImg(teamData.logos),
+                  teamData.logos!,
                   width: 30,
                   height: 30,
                 ),

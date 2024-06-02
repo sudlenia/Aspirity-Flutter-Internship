@@ -4,6 +4,7 @@ import 'package:flutter_application_2/data/team_data/team_data.dart';
 import 'package:flutter_application_2/domain/i_repository.dart';
 import 'package:flutter_application_2/domain/models/season_group/season/season.dart';
 import 'package:flutter_application_2/domain/models/standings_group/standings_data/standings_data.dart';
+import 'package:flutter_application_2/domain/models/standings_group/team_logos/team_logos.dart';
 import 'package:flutter_application_2/ui/team_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -18,12 +19,17 @@ class TeamsWidget extends StatelessWidget {
       required this.seasons,
       required this.repository});
 
+  String getImg(List<TeamLogos>? logos) {
+    return logos?.isNotEmpty == true
+        ? logos![0].href
+        : "https://eis.clientsimple.ru/upload/iblock/353/b0w2diy92mr6m409b1qsvc2l5gjjz2pp.jpg";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:
-            const Text("Турнирная таблица"),
+        title: const Text("Турнирная таблица"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () =>
@@ -34,11 +40,13 @@ class TeamsWidget extends StatelessWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: RadialGradient(
-          colors: [Colors.blue, Colors.lightBlueAccent],
-          radius: 1,
-          stops: [0.5, 1],
-        ),),
+        decoration: const BoxDecoration(
+          gradient: RadialGradient(
+            colors: [Colors.blue, Colors.lightBlueAccent],
+            radius: 1,
+            stops: [0.5, 1],
+          ),
+        ),
         child: ListView.separated(
             padding: const EdgeInsets.symmetric(vertical: 16),
             itemBuilder: (context, index) {
@@ -46,7 +54,7 @@ class TeamsWidget extends StatelessWidget {
               final stats = standingsData.standings[index].stats;
               return TeamWidget(
                   teamData: TeamData(
-                logos: team.logos[0],
+                logos: getImg(team.logos),
                 name: team.name,
                 gamesPlayed: repository.getValue("gamesPlayed", stats),
                 losses: repository.getValue("losses", stats),

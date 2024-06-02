@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TeamData {
-  TeamLogos? get logos => throw _privateConstructorUsedError;
+  String? get logos => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get gamesPlayed => throw _privateConstructorUsedError;
   String get losses => throw _privateConstructorUsedError;
@@ -35,15 +35,13 @@ abstract class $TeamDataCopyWith<$Res> {
       _$TeamDataCopyWithImpl<$Res, TeamData>;
   @useResult
   $Res call(
-      {TeamLogos? logos,
+      {String? logos,
       String name,
       String gamesPlayed,
       String losses,
       String points,
       String wins,
       String ties});
-
-  $TeamLogosCopyWith<$Res>? get logos;
 }
 
 /// @nodoc
@@ -71,7 +69,7 @@ class _$TeamDataCopyWithImpl<$Res, $Val extends TeamData>
       logos: freezed == logos
           ? _value.logos
           : logos // ignore: cast_nullable_to_non_nullable
-              as TeamLogos?,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -98,18 +96,6 @@ class _$TeamDataCopyWithImpl<$Res, $Val extends TeamData>
               as String,
     ) as $Val);
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $TeamLogosCopyWith<$Res>? get logos {
-    if (_value.logos == null) {
-      return null;
-    }
-
-    return $TeamLogosCopyWith<$Res>(_value.logos!, (value) {
-      return _then(_value.copyWith(logos: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -121,16 +107,13 @@ abstract class _$$TeamDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {TeamLogos? logos,
+      {String? logos,
       String name,
       String gamesPlayed,
       String losses,
       String points,
       String wins,
       String ties});
-
-  @override
-  $TeamLogosCopyWith<$Res>? get logos;
 }
 
 /// @nodoc
@@ -156,7 +139,7 @@ class __$$TeamDataImplCopyWithImpl<$Res>
       logos: freezed == logos
           ? _value.logos
           : logos // ignore: cast_nullable_to_non_nullable
-              as TeamLogos?,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -199,7 +182,7 @@ class _$TeamDataImpl extends _TeamData {
       : super._();
 
   @override
-  final TeamLogos? logos;
+  final String? logos;
   @override
   final String name;
   @override
@@ -246,7 +229,7 @@ class _$TeamDataImpl extends _TeamData {
 
 abstract class _TeamData extends TeamData {
   const factory _TeamData(
-      {final TeamLogos? logos,
+      {final String? logos,
       required final String name,
       required final String gamesPlayed,
       required final String losses,
@@ -256,7 +239,7 @@ abstract class _TeamData extends TeamData {
   const _TeamData._() : super._();
 
   @override
-  TeamLogos? get logos;
+  String? get logos;
   @override
   String get name;
   @override
